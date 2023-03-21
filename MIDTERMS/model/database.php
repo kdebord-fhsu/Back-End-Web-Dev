@@ -8,10 +8,10 @@ class Database {
     private static $db;
 
     public function __construct(){
-        self::$host = getenv('SQL_HOST') ? getenv('SQL_HOST') : 'localhost';
-        self::$dbname = getenv('SQL_DB') ? getenv('SQL_DB') : 'zippyusedautos';
-        self::$username = getenv('SQL_USER') ? getenv('SQL_USER') : 'root';
-        self::$password = getenv('SQL_PW') ? getenv('SQL_PW') : '';
+        self::$host = getenv('SQL_HOST') ? getenv('SQL_HOST') : 'r4wkv4apxn9btls2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+        self::$dbname = getenv('SQL_DB') ? getenv('SQL_DB') : 'ywjy0umm9qs73g4a';
+        self::$username = getenv('SQL_USER') ? getenv('SQL_USER') : 'vmsd6aewymsxzdgi';
+        self::$password = getenv('SQL_PW') ? getenv('SQL_PW') : 'zj6g5dris9kla3zv';
         self::$dsn = 'mysql:host=' . self::$host . ';dbname=' . self::$dbname;
     }
 
