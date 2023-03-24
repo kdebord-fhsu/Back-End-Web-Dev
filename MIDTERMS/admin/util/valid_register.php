@@ -1,12 +1,10 @@
 <?php
     class ValidRegister {
         private static function valid_username($username) {
-            // Ternary Statement pg.245
             return (!$username || strlen($username) < 6) ? false : true;
         }
 
         private static function valid_password($password) {
-            // See Chapter 15: How to Use Regular Expressions
             $pattern = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/';
             return preg_match($pattern, $password);
         }
@@ -17,7 +15,6 @@
         }
 
         public static function valid_registration($username, $password, $confirm_password) {
-            // Chapter 11 Arrays
             $errors = array();
 
             // username validation
