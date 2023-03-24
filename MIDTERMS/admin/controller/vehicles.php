@@ -23,17 +23,6 @@ switch ($action) {
                 $filters['class_id'] = $class_id;
             }
 
-            // This is the implementation WITHOUT EC, just simple if-elseif statements
-            // make { + type || + class }, then it filters only by make due to precedence
-            // type { +class }, returns records by type
-            // if ($make_id) {
-            //     $filters['make_id'] = $make_id;
-            // } elseif ($type_id) {
-            //     $filters['type_id'] = $type_id;
-            // } else if ($class_id) {
-            //     $filters['class_id'] = $class_id;
-            // }
-
             $vehicles_list = VehiclesTable::get_vehicles_filtered($sort_by, $filters);
         } else {
             $vehicles_list = VehiclesTable::get_vehicles();
